@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Create Task</title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+	</head>
+	<body>
+		<div class="task-container">
+			<h1>Create a Task</h1>
+			<span id="message" class="success-message"></span>
+			<form id="task-form">
+				<label for="title">
+					Title:
+					<input
+						type="text"
+						name="title"
+						id="title"
+						placeholder="Task Title"
+						required
+					/>
+					<span id="title-error" class="error"></span>
+				</label>
+
+				<label for="description">
+					Description:
+					<textarea
+						name="description"
+						id="description"
+						placeholder="Task Description"
+						rows="4"
+						required
+					></textarea>
+					<span id="description-error" class="error"></span>
+				</label>
+
+				<label for="taskDate">
+					Task Date:
+					<input type="date" name="taskDate" id="taskDate" required />
+					<span id="taskDate-error" class="error"></span>
+				</label>
+
+				<input type="submit" value="Create Task" />
+			</form>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="/javascripts/creataePost.js"></script>
+	</body>
+</html>
